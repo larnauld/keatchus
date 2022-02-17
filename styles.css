@@ -62,18 +62,22 @@ table {
 /*header*/
 header {
     background-color: rgba(98, 117, 91, 1);
-    width: 100vh;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 .header-title {
     color: #ffff;
     font-family: "Gastromond", sans-serif;
-    font-size: 50px;
+    font-size: 30px;
     padding: 20px;
+    display: inline-block;
 }
 
 .header-button {
     color: #ffff;
+    display: inline-block;
 }
 
 .header-button:hover {
@@ -82,25 +86,26 @@ header {
 
 
 /*menu*/
- .menu-toggle {
+.menu-toggle {
    display: block;
    position: relative;
    top: 20px;
    left: 20px;
- }
+   z-index: 1;
+}
  
- .menu-toggle a {
+.menu-toggle a {
    text-decoration: none;
    font-family: "Superclarendon", sans-serif;
    color: #ffff;
     }
  
- .menu-toggle a:hover {
+.menu-toggle a:hover {
    color: rgba(240, 188, 0, 1);
- }
+}
  
  
- .menu-toggle input {
+.menu-toggle input {
    display: block;
    width: 40px;
    height: 32px;
@@ -112,10 +117,10 @@ header {
    
    opacity: 0; /* hide this */
    z-index: 2; /* and place it over the hamburger */
- }
+}
  
  /*hamburger*/
- .menu-toggle span {
+.menu-toggle span {
    display: block;
    width: 33px;
    height: 4px;
@@ -134,30 +139,30 @@ header {
                opacity 0.55s ease;
  }
  
- .menu-toggle span:first-child {
+.menu-toggle span:first-child {
    transform-origin: 0% 0%;
  }
  
- .menu-toggle span:nth-last-child(2) {
+.menu-toggle span:nth-last-child(2) {
    transform-origin: 0% 100%;
  }
  
  /*transform slices of hamburger into crossmark*/
- .menu-toggle input:checked ~ span {
+.menu-toggle input:checked ~ span {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: rgba(240, 188, 0, 1);
  }
- .menu-toggle input:checked ~ span:nth-last-child(3) {
+.menu-toggle input:checked ~ span:nth-last-child(3) {
    opacity: 0;
    transform: rotate(0deg) scale(0.2, 0.2);
  }
- .menu-toggle input:checked ~ span:nth-last-child(2) {
+.menu-toggle input:checked ~ span:nth-last-child(2) {
    transform: rotate(-45deg) translate(0, -1px);
  }
  
  /*position absolute top left screen*/
- .menu {
+.menu {
    position: absolute;
    width: 300px;
    margin: -100px 0 0 -50px;
@@ -169,22 +174,65 @@ header {
    transform-origin: 0% 0%;
    transform: translate(-100%, 0);
    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
+}
  
- .menu li {
+.menu li {
    padding: 10px;
    font-size: 22px;
- }
+}
  
  /*slide from the left*/
- .menu-toggle input:checked ~ ul {
+.menu-toggle input:checked ~ ul {
    transform: none;
- }
+}
 
 
- /*main*/
- main {
-     margin: 16px;
- }
+/*main*/
 
-  
+/*pages buttons*/
+main section {
+    position: relative;
+    background-color: rgba(66, 89, 60, 1);
+    display: flex;
+    justify-content: center;
+}
+
+ main a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+}
+
+main a::before {
+    background-color: rgba(130, 166, 122, 1);
+}
+ main a:hover {
+    background-color: rgba(130, 166, 122, 1);
+    color: white;
+}
+  main a:checked {
+    background-color: rgba(130, 166, 122, 1);
+    color: white; 
+}
+
+.page-buttons {
+    background-color: rgba(66, 89, 60, 1);
+    color: white;
+}
+
+
+/*days buttons*/
+main nav {
+    position: relative ;
+    background-color: rgba(66, 89, 60, 1);
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.days-buttons {
+    background-color: rgba(66, 89, 60, 1);
+    color: white;
+}
