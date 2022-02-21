@@ -23,7 +23,7 @@
               <ul class="menu">
                 <a href="#"><li>Livre de recettes</li></a>
                 <a href="#"><li>Planning</li></a>
-                <a href="#"><li>Défi</li></a>
+                <a href="#"><li>Défis</li></a>
                 <a href="#"><li>Activité</li></a>
               </ul>
             </div>
@@ -31,34 +31,121 @@
         <div>
             <h1 class="header-title">Keatchus</h1>
         </div>
-        <div>
-        <a href="#" class="header-button"><img src="images/recherche.svg" alt="Rechercher"></a>
-        <a href="#" class="header-button"><img src="images/profil.svg" alt=""></a>
+
+        <img class="header950 logo" src="images/logo-keatchus.svg" alt="Logo Keatchus"> 
+             <div class="header950 home-followed">
+                <a href="#" class="content-buttons">Accueil</a>
+            </div>
+            <div class="header950 home-followed">
+                <a href="#" class="content-buttons">Abonnements</a>
+            </div>
+            <div class="search-container header950">
+                <input class="search-bar" type="text" value="Rechercher">
+                <input class="search-icon" type="image" src="images/recherche.svg" alt="Rechercher">
+            </div>
+
+        <div class="header-buttons">
+            <a href="#" class="search"><img src="images/recherche.svg" alt="Rechercher"></a>
+            <a href="#" class="header950"><img src="images/livre-recettes.svg" alt="Livre de recettes"></a>
+            <a href="#" class="header950"><img src="images/planning.svg" alt="Planning"></a>
+            <a href="#" class="header950"><img src="images/defi.svg" alt="Défis"></a>
+            <a href="#" class="header950"><img src="images/activite.svg" alt="Activité"></a>
+            <a href="#" class="profil"><img src="images/profil.svg" alt="Profil"></a>
         </div>
     </header>
 
     <main>
-        <section>
-            <a href="#" class="page-buttons">Planning</a>
-            <a href="#" class="page-buttons">Liste de course</a>
-        </section>
-        <nav>
-            <a href="#" class="days-buttons">Lun</a>
-            <a href="#" class="days-buttons">Mar</a>
-            <a href="#" class="days-buttons">Mer</a>
-            <a href="#" class="days-buttons">Jeu</a>
-            <a href="#" class="days-buttons">Ven</a>
-            <a href="#" class="days-buttons">Sam</a>
-            <a href="#" class="days-buttons">Dim</a>
-        </nav>
 
-        <p>Petit-déjeuner</p>
-        <img src="images/petit-dej-lundi.png" alt="Budda Bowl">
-        <p>Déjeuner</p>
-        <img src="images/dej1-lundi.svg" alt="Julienne de légumes">
-        <img src="images/dej2-lundi.svg" alt="Wok au poulet">
-        <img src="images/dej3-lundi.svg" alt="Smoothie bowl">
-        <p>Diner</p>
+        <div class="content">
+        <section>
+                <p class="primary-title">Planning</p>
+            <nav class="days-bar">
+                <a href="#" class="days-buttons">Lun</a>
+                <a href="#" class="days-buttons">Mar</a>
+                <a href="#" class="days-buttons">Mer</a>
+                <a href="#" class="days-buttons">Jeu</a>
+                <a href="#" class="days-buttons">Ven</a>
+                <a href="#" class="days-buttons">Sam</a>
+                <a href="#" class="days-buttons">Dim</a>
+            </nav>
+            <div class="meals">
+                <div class="meals-header">
+                    <p class="meals-name">Petit-dejeuner</p>
+                    <img src="images/add.svg" alt="Ajouter un plat au planning" class="add">
+                </div>
+                <div class="dish">
+                    <img src="images/close.svg" alt="Enlever le plat du planning" class="close">
+                    <img src="images/petit-dej-lundi.svg" alt="Budda Bowl" class="img-planning">
+                    <p class="dish-name">Budda bowl</p>
+                </div>
+            </div>
+
+            <div class="meals">
+                <div class="meals-header">
+                    <p class="meals-name">Dejeuner</p>
+                    <img src="images/add.svg" alt="Ajouter un plat au planning" class="add">
+                </div>
+                <div class="lunch">
+                    <div class="dish">
+                        <img src="images/close.svg" alt="Enlever le plat du planning" class="close">
+                        <img src="images/dej1-lundi.svg" alt="Légumes vapeur" class="img-planning">
+                        <p class="dish-name">Légumes vapeur</p>
+                    </div>
+                    <div class="dish">
+                        <img src="images/close.svg" alt="Enlever le plat du planning" class="close">
+                        <img src="images/dej2-lundi.svg" alt="Wok au poulet" class="img-planning"></p>
+                        <p class="dish-name">Wok au poulet</p>
+                    </div>
+                    <div class="dish">
+                        <img src="images/close.svg" alt="Enlever le plat du planning" class="close">
+                        <img src="images/dej3-lundi.svg" alt="Smoothie bowl" class="img-planning">
+                        <p class="dish-name">Smoothie bowl</p>
+                    </div>
+                </div>
+
+            <div class="meals">
+                <div class="meals-header">
+                    <p class="meals-name">Diner</p>
+                    <img src="images/add.svg" alt="Ajouter un plat au planning" class="add">
+                </div>
+                <div class="dish">
+                    <img src="images/close.svg" alt="Enlever le plat du planning" class="close">
+                    <img src="images/diner-lundi.svg" alt="Avocats au four" class="img-planning">
+                    <p class="dish-name">Avocats au four</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="shopping-list">
+            <p class="primary-title">Liste de course</p>
+            <div class="secondary-title">
+                <p>Produits</p>
+                <p>Quantité</p>
+            </div>
+            <div class="shopping-items">
+                <ul>
+                    <li class="items"><input type="checkbox" name="ingredient">Poulet</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Oignon</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Poivron</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Carotte</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Sauce soja</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Tortilla</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Avocat</li>
+                    <li class="items"><input type="checkbox" name="ingredient">Ail</li>
+                </ul>
+                <ul >
+                    <li class="items">600g</li>
+                    <li class="items">100g</li>
+                    <li class="items">100g</li>
+                    <li class="items">200g</li>
+                    <li class="items">2 cuillères</li>
+                    <li class="items">4 pièces</li>
+                    <li class="items">4 pièces</li>
+                    <li class="items">2 gousses</li>
+                </ul>
+            </div>
+        </aside>
+        </div>
     </main>
 
     <script src="scripts.js"></script>

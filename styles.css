@@ -45,7 +45,9 @@ table {
 /*Fin du reset*/
 
 
-/*Import des fonts*/
+/*
+Import des fonts
+*/
 @font-face {
     font-family: "Gastromond";
     src : url("fonts/Gastromond.woff2"),
@@ -59,11 +61,15 @@ table {
 }
 
 
-/*header*/
+/*
+header
+*/
 header {
     background-color: rgba(98, 117, 91, 1);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
 
@@ -75,6 +81,10 @@ header {
     display: inline-block;
 }
 
+.header-title:hover {
+    color: rgba(240, 188, 0, 1);
+}
+
 .header-button {
     color: #ffff;
     display: inline-block;
@@ -84,12 +94,29 @@ header {
     color: rgba(240, 188, 0, 1);
 }
 
+.header-buttons {
+    display: block;
+    position: relative;
+    right: 20px;
+}
 
-/*menu*/
+.profil {
+    margin-left: 15px;
+}
+
+.header950  {
+    display: none;
+    margin-right: 20px;
+}
+
+
+
+/*
+menu
+*/
 .menu-toggle {
    display: block;
    position: relative;
-   top: 20px;
    left: 20px;
    z-index: 1;
 }
@@ -119,7 +146,9 @@ header {
    z-index: 2; /* and place it over the hamburger */
 }
  
- /*hamburger*/
+ /*
+ hamburger
+ */
 .menu-toggle span {
    display: block;
    width: 33px;
@@ -164,7 +193,7 @@ header {
  /*position absolute top left screen*/
 .menu {
    position: absolute;
-   width: 300px;
+   width: 100vw;
    margin: -100px 0 0 -50px;
    padding: 50px;
    padding-top: 125px;
@@ -187,52 +216,204 @@ header {
 }
 
 
-/*main*/
+/*
+main
+*/
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-/*pages buttons*/
-main section {
+.primary-title {
+    margin: 30px 30px 10px 30px;
+    padding: 10px;
     position: relative;
     background-color: rgba(66, 89, 60, 1);
     display: flex;
-    justify-content: center;
-}
-
- main a {
+    justify-content: space-evenly;
+    border-radius: 15px;
+    color: white;
     text-decoration: none;
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 15px;
+    font-size: 150%;
 }
 
-main a::before {
-    background-color: rgba(130, 166, 122, 1);
-}
- main a:hover {
-    background-color: rgba(130, 166, 122, 1);
-    color: white;
-}
-  main a:checked {
-    background-color: rgba(130, 166, 122, 1);
-    color: white; 
-}
-
-.page-buttons {
-    background-color: rgba(66, 89, 60, 1);
-    color: white;
-}
-
-
-/*days buttons*/
-main nav {
+/*nav bar*/
+.days-bar {
+    margin: 0px 30px 0 30px;
     position: relative ;
     background-color: rgba(66, 89, 60, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+
+ .days-buttons {
+    text-decoration: none;
+    border-radius: 15px;
+    color: white;
+    margin: 0;
+    padding: 20px 15px 20px 15px;
+}
+
+ .days-buttons:hover {
+    background-color: rgba(130, 166, 122, 1);
+    color: white;
+}
+
+/*planning*/
+.meals {
+    margin: 40px 0 40px 0;
+}
+
+
+.meals-header {
+    display: flex;
+}
+
+.add {
+    margin-left: 15px;
+}
+
+.meals-name {
+    font-family: "Gastromond", sans-serif ;
+    font-size: 130%;
+    position: relative;
+    margin-left: 30px;
+}
+
+.lunch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dish {
+    align-items: center;
+    display: inline-block;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    margin-top: 40px;
+    right: 50px;
+    z-index: 1;
+}
+
+.img-planning {
+    margin: 30px 30px 5px 30px;
+    position: relative ;
     display: inline-block;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 15px;
+    max-width: 100%;
 }
 
-.days-buttons {
+.dish-name {
+    margin-left: 30px;
+    font-family: "Superclarendon", sans-serif;
+    font-size: 130%;
+}
+
+/*shopping list*/
+.shopping-list {
+    width: 100%;
+    max-width: 663px;
+}
+
+.shopping-items {
+    margin-left: 30px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.items {
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    accent-color: rgba(240, 188, 0, 1);
+}
+
+.secondary-title {
+    margin: 0px 30px 0 30px;
+    position: relative ;
     background-color: rgba(66, 89, 60, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 15px;
     color: white;
+    padding: 20px 15px 20px 15px;
+}
+
+@media (min-width: 950px) {
+    /*main part*/
+    .shopping-list{
+        width: auto;
+        flex-grow: 1;
+        border-left: 2px solid rgba(98, 117, 91, 1);
+    }
+    
+    /*header*/
+    .search, .menu-toggle, .header-title {
+        display: none;
+    }
+
+    .header950 {
+        display: inline-block;
+    }
+
+    .logo {
+        position: absolute;
+        left: 20px;
+    }
+
+    .home-followed {
+        margin: 0px 10px 0 10px;
+        position: relative ;
+        background-color: rgba(130, 166, 122, 1);
+        border-radius: 50px;
+        color: white;
+        padding: 10px 15px 10px 15px;
+    }
+
+    .content-buttons {
+        text-decoration: none;
+        color: white;
+        font-family: "Superclarendon", sans-serif;
+        font-size: 15px;
+    }
+
+    /*barre de recherche*/
+    .search-container {
+        width: 260px;
+        position: relative;
+        /* border: none; */
+    }
+    
+    .search-bar {
+        width: 198px;
+        padding: 10px 50px 10px 20px;
+        background-color: rgba(130, 166, 122, 1);
+        border-radius: 50px;
+        font-family: "Superclarendon", sans-serif;
+        font-size: 15px;
+        color: white;
+    }
+    
+    .search-icon {
+        margin-top: -17px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+    }
+      
 }
